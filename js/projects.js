@@ -1,0 +1,20 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const animatedSections = document.querySelectorAll(".animate-section");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    }
+  );
+
+  animatedSections.forEach(section => observer.observe(section));
+});

@@ -1,0 +1,106 @@
+.contact-section {
+  background-color: #1f8a9a;
+  color: #fff;
+
+  .section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+
+  .contact-card {
+    background: transparent;
+    border: none;
+  }
+
+  .minimal-form {
+    .form-field {
+      margin-bottom: 2.5rem;
+
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(255,255,255,0.6);
+        padding: 0.5rem 0;
+        color: #fff;
+        font-size: 1rem;
+
+        &:focus {
+          outline: none;
+          border-bottom-color: #fff;
+        }
+      }
+
+      textarea {
+        resize: none;
+      }
+    }
+
+    .submit-btn {
+      margin-top: 2rem;
+      padding: 0.75rem 2.5rem;
+      border-radius: 999px;
+      border: none;
+      background: #fff;
+      color: #000;
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
+
+  iframe {
+    border-radius: 0.75rem;
+  }
+}
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 3rem 0;
+
+    .section-title {
+      font-size: 2.2rem;
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+    }
+
+    .minimal-form {
+      .form-field {
+        margin-bottom: 1.8rem;
+
+        label {
+          font-size: 0.9rem;
+        }
+
+        input,
+        textarea {
+          font-size: 0.95rem;
+          padding: 0.4rem 0;
+        }
+      }
+
+      .submit-btn {
+        padding: 0.6rem 2rem;
+        font-size: 0.95rem;
+      }
+    }
+
+    /* MAPA MÁS GRANDE */
+    iframe {
+      min-height: 320px;
+    }
+  }
+}
