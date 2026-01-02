@@ -1,0 +1,89 @@
+.counters-section {
+  background-color: #737577;
+  padding: 4rem 0;
+
+  /* Animación de entrada */
+  &.animate-section {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 1.1s ease, transform 1.1s ease;
+  }
+
+  &.animate-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .section-title {
+    font-family: "Merriweather", serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-decoration: underline;
+    color: #ffffff;
+  }
+
+  .section-description {
+    font-size: 1.1rem;
+    color: #000000;
+    margin-bottom: 3rem;
+    text-align: center;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .counters-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+
+    .counter-item {
+      text-align: center;
+      min-width: 150px;
+
+      .counter {
+        display: block;
+        font-size: 3rem;
+        font-weight: bold;
+        color: #ffffff;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+        color: #ffffff;
+        margin: 0;
+      }
+    }
+  }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  .counters-section.animate-section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .counters-row {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .counter {
+    font-size: 2.2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+}
